@@ -1,5 +1,10 @@
-stage('build') {
+
+pipeline {
+agent any
+  stage('build') {
     steps {
         sh 'python abc.py'
-    }
+   
+   }
+ }
 }
