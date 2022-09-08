@@ -4,8 +4,13 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: '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', url: 'https://github.com/kalyanirangisetti/python.git']]])
                 
             }
+        stage('build') {
+           steps {
+               
         }
+       
     }
 }
