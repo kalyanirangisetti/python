@@ -1,1 +1,11 @@
-git credentialsId: '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', url: 'https://github.com/kalyanirangisetti/python.git'
+pipeline {
+    agent any
+
+    stages {
+        stage('build') {
+            steps {
+                sh 'python python.py'
+            }
+        }
+    }
+}
